@@ -22,3 +22,8 @@ begin
 	from Employees
 	return ile;
 end;
+
+creat function fun2() return number is
+begin
+return 1;
+end;
