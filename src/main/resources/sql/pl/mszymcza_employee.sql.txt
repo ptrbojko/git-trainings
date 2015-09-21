@@ -15,3 +15,17 @@ begin
 exception when others then
   null;
 end;
+
+function countEmployees2
+is
+  ctr pls_integer;
+begin
+  SELECT  count(1)
+  INTO    ctr
+  FROM    EMPLOYEES ee
+  WHERE   ee.last_name LIKE 'SZYMCZAK';
+  
+  return  ctr;
+exception when others then
+  null;
+end;
